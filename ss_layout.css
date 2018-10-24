@@ -15,29 +15,93 @@
 
 
 /* Article Styles */
-
-
+/* the article will stay to the left and take up 384 pixels */
+article {
+    float: left;
+    width: 384px;
+}
 
 
 /* First Line and Drop Cap Styles */
+/* the firts paragraph will have the first line be small caps, and the first letter be larger, offset, and have more decoration */
+article p:first-of-type:first-line {
+    font-size: 1.25em;
+    font-variant: small-caps;
+}
 
-
-
-
+article p:first-of-type:first-letter {
+    font-size: 4em;
+    font-family: serif;
+    float: left;
+    line-height: 0.8em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
 
 /* Aside Styles */
-
-
+/* the aside will take up 768 pixels, and stay left as much as possible */
+aside {
+    width: 768px;
+    float: left;
+}
 
 
 /* Map Styles */
+/* the map will take up 688 pixels, and relative to other elements, be 20 pixels away from both the bottom and top, while being horizontally centered */
+div#battleMap {
+    width: 688px;
+    position: relative;
+    margin: 20px auto 20px auto;
+}
 
-
-
+img#mapImage {
+    display: block;
+    width: 100%;
+}
 
 /* Interactive Map Styles */
+/* the map markers use absolute positioning to stay at a specific spot on the page, and thus the map */
+a.battleMarkers {
+    position: absolute;
+}
 
+a#marker1 {
+    top: 220px;
+    left: 340px;
+}
 
+a#marker2 {
+    top: 194px;
+    left: 358px;
+}
 
+a#marker3 {
+    top: 202px;
+    left: 400px;
+}
+
+a#marker4 {
+    top: 217px;
+    left: 452px;
+}
+
+a#marker5 {
+    top: 229px;
+    left: 498px;
+}
+
+a#marker6 {
+    top: 246px;
+    left: 544px;
+}
 
 /* Map Information Styles */
+/* the div with the id of 'mapInfo' will not display (until the next selector is activated) */
+div.mapInfo {
+    display: none;
+}
+
+/* the markers will now display the information of that marker when hovered over */
+a.battleMarkers:hover+div.mapInfo {
+    display: block;
+}
